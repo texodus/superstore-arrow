@@ -1,0 +1,22 @@
+{
+  "name": "superstore-arrow",
+  "version": "1.0.0",
+  "description": "Sample data module for analytics libraries, such as perspective and regular-table",
+  "repository": "https://github.com/texodus/superstore-arrow.git",
+  "author": "Andrew Stein <steinlink@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "superstore.arrow",
+  "module": "superstore.arrow",
+  "browser": "superstore.arrow",
+  "unpkg": "superstore.arrow",
+  "jsdelivr": "superstore.arrow",
+  "files": [
+      "superstore.arrow"
+  ],
+  "devDependencies": {
+    "@finos/perspective": "0.5.0",
+    "eslint": "^7.1.0",
+    "xlsx": "^0.16.1"
+  }
+}
