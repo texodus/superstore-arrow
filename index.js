@@ -27,6 +27,8 @@ const SCHEMA = {
     Discount: "float",
     Profit: "float",
 };
+
+if (false) {
 https
     .get(URL, (res) => {
         console.log(`Status ${res.statusCode}`);
@@ -46,8 +48,23 @@ https
             const table = perspective.table(SCHEMA);
             await table.update(csv);
             const arrow = await table.view().to_arrow();            
-            fs.writeFileSync("./superstore.arrow", Buffer.from(arrow), "binary");
+            fs.writeFileSync("./superstore.feather", Buffer.from(arrow), "binary");
             console.log("Wrote " + arrow.byteLength + " bytes");
         });
     })
     .on("error", (error) => console.error(error));
+} else {
+
+    const arrow = fs.readFileSync("./superstore.arrow");
+    perspective.table(SCHEMA).then(table => {
+        table.update(arrow.buffer);
+        return table;
+    }).then(table => 
+        table.view()
+    ).then(view => 
+        view.to_arrow()
+    ).then(feather => 
+        fs.writeFileSync("./superstore.feather", Buffer.from(feather), "binary")
+    );
+
+}
