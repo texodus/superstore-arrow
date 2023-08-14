@@ -1,6 +1,6 @@
 {
   "name": "superstore-arrow",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Sample data module for analytics libraries, such as perspective and regular-table",
   "repository": "https://github.com/texodus/superstore-arrow.git",
   "author": "Andrew Stein <steinlink@gmail.com>",
