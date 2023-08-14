@@ -13,7 +13,7 @@
   "jsdelivr": "superstore.feather",
   "files": [
     "superstore.arrow",
-    "superstore.feather"
+    "superstore.lz4.arrow"
   ],
   "devDependencies": {
     "@finos/perspective": "2.4.0",
