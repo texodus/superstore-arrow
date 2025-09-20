@@ -7,20 +7,19 @@ settings:
 importers:
 
   .:
-    dependencies:
-      duckdb:
-        specifier: ^1.4.0
-        version: 1.4.0(encoding@0.1.13)
-      prettier:
-        specifier: ^3.6.2
-        version: 3.6.2
     devDependencies:
       '@finos/perspective':
         specifier: 3.8.0
         version: 3.8.0
+      duckdb:
+        specifier: ^1.4.0
+        version: 1.4.0(encoding@0.1.13)
       eslint:
         specifier: ^7.1.0
         version: 7.32.0
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
       xlsx:
         specifier: ^0.16.1
         version: 0.16.9
