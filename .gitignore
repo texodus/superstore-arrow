@@ -1,1 +1,4 @@
 node_modules
+superstore.parquet
+superstore.lz4.arrow
+superstore.csv

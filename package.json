@@ -1,23 +1,37 @@
 {
-  "name": "superstore-arrow",
-  "version": "3.0.0",
-  "description": "Sample data module for analytics libraries, such as perspective and regular-table",
-  "repository": "https://github.com/texodus/superstore-arrow.git",
-  "author": "Andrew Stein <steinlink@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "main": "superstore.feather",
-  "module": "superstore.feather",
-  "browser": "superstore.feather",
-  "unpkg": "superstore.feather",
-  "jsdelivr": "superstore.feather",
-  "files": [
-    "superstore.arrow",
-    "superstore.lz4.arrow"
-  ],
-  "devDependencies": {
-    "@finos/perspective": "2.4.0",
-    "eslint": "^7.1.0",
-    "xlsx": "^0.16.1"
-  }
+    "name": "superstore-arrow",
+    "version": "3.0.0",
+    "description": "Sample data module for analytics libraries, such as perspective and regular-table",
+    "repository": "https://github.com/texodus/superstore-arrow.git",
+    "author": "Andrew Stein <steinlink@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "main": "superstore.lz4.arrow",
+    "module": "superstore.lz4.arrow",
+    "browser": "superstore.lz4.arrow",
+    "unpkg": "superstore.lz4.arrow",
+    "jsdelivr": "superstore.lz4.arrow",
+    "files": [
+        "superstore.arrow",
+        "superstore.lz4.arrow",
+        "superstore.csv",
+        "superstore.parquet"
+    ],
+    "devDependencies": {
+        "@finos/perspective": "3.8.0",
+        "eslint": "^7.1.0",
+        "xlsx": "^0.16.1"
+    },
+    "dependencies": {
+        "duckdb": "^1.4.0",
+        "prettier": "^3.6.2"
+    },
+    "pnpm": {
+        "ignoredBuiltDependencies": [
+            "duckdb"
+        ],
+        "onlyBuiltDependencies": [
+            "duckdb"
+        ]
+    }
 }
